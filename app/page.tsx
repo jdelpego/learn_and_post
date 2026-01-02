@@ -27,11 +27,11 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleGenerate = async (feedback: string) => {
+  const handleGenerate = async (feedback: string, application: string) => {
     setView("GENERATING");
     
     // Simulate AI delay
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 2500));
 
     if (selectedArticle) {
       const post = `## The Core Insight
@@ -48,9 +48,11 @@ In a world obsessed with speed, we often forget the power of ${selectedArticle.t
 
 There is an inherent tension here. On one hand, we want to move fast. On the other, "${selectedArticle.title}" suggests a different path. This isn't a contradiction; it's a paradox we must navigate.
 
-## Personal Reflection
+## Real World Application
 
-When I read "${selectedArticle.title}" by ${selectedArticle.author}, I realized that my own approach has been too binary. The real leverage comes from embracing the nuance.
+For me, this hits home. ${application}
+
+This isn't just theory. It's the difference between playing startup and actually building one.
 
 ---
 
