@@ -1,0 +1,2 @@
+# Goal
+The goal of this MVP is to display 10 user articles for the intended audience of "aspiring student tech founders", then capture how the user feels about the article, then generate a post suggestion for LinkedIn based on the article you read. Read -> Learning -> Share
