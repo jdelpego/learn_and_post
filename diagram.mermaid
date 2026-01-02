@@ -1,5 +1,15 @@
-graph TD;
-    Start --> A[Display Articles];
-    A --> B[Capture User Feedback on 1];
-    B --> C[Suggest Post];
-    C --> End;
+graph TD
+    Start[Open Site] --> Q[Interested in becoming a tech founder someday?]
+
+    Q -->|Yes| L[Curated Articles List]
+    Q -->|No| Exit[Exit or Inspirational Message]
+
+    L --> A[Read Full Article]
+
+    A --> R[Capture Thoughts while viewing article]
+
+    R --> P[Generate LinkedIn Post]
+
+    P --> V[LinkedIn Style Preview Editable]
+
+    V --> End[Copy and Publish]
