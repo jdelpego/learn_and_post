@@ -34,7 +34,41 @@ export default function Home() {
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
     if (selectedArticle) {
-      const post = `Just read "${selectedArticle.title}" by ${selectedArticle.author} and it really got me thinking.\n\n${feedback}\n\nThis is a key lesson for any student founder. It's not just about building; it's about ${selectedArticle.tag.toLowerCase()}.\n\n#startup #learning #${selectedArticle.tag.replace(/\s+/g, '')}`;
+      const post = `## The Core Insight
+
+${feedback}
+
+But let's go deeper. It's not just about the surface-level observation. It's about the fundamental shift in perspective required to truly understand ${selectedArticle.tag}.
+
+## Why This Matters Now
+
+In a world obsessed with speed, we often forget the power of ${selectedArticle.tag.toLowerCase()}. ${selectedArticle.summary}
+
+## The Tension
+
+There is an inherent tension here. On one hand, we want to move fast. On the other, "${selectedArticle.title}" suggests a different path. This isn't a contradiction; it's a paradox we must navigate.
+
+## Personal Reflection
+
+When I read "${selectedArticle.title}" by ${selectedArticle.author}, I realized that my own approach has been too binary. The real leverage comes from embracing the nuance.
+
+---
+
+### 🔍 Structured Feedback
+
+**Core Thesis Clarity**
+Strong. The connection between ${selectedArticle.tag} and your personal experience is vivid.
+
+**Emotional Resonance**
+High. The vulnerability in admitting the struggle with this concept makes it relatable.
+
+**Intellectual Rigor**
+Solid, but could be pushed further. Consider contrasting this view with the opposite perspective to strengthen the argument.
+
+**Sharpening The Angle**
+Make it more personal. Use "I" statements more aggressively in the second paragraph.
+
+#${selectedArticle.tag.replace(/\s+/g, '')} #FounderMindset #DeepWork #Growth`;
       setGeneratedPost(post);
       setView("RESULT");
     }
